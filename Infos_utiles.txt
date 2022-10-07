@@ -2,3 +2,4 @@ Activity Recognition API : Pour reconnaître si on bouge ou si on se tient droit
 MPAndroidChart
 Gravity View : Pour utiliser l'orientation du téléphone
 https://developer.android.com/guide/topics/connectivity/bluetooth/find-ble-devices#java
+https://developer.android.com/reference/android/bluetooth/package-summary
