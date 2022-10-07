@@ -1,0 +1,606 @@
+{
+  "id": "Projet MI12",
+  "documents": [
+    {
+      "id": "001",
+      "guid": "5e8d712a-90f6-496f-9482-41aefd6ad7be",
+      "lastId": 16,
+      "createdOn": "2022-10-07T08:22:02.001Z",
+      "createdBy": {
+        "name": "Xinghua SHAO",
+        "email": "1156883877@qq.com",
+        "company": ""
+      },
+      "lastChangedOn": "2022-10-07T08:33:38.148Z",
+      "lastChangedBy": {
+        "name": "Xinghua SHAO",
+        "email": "1156883877@qq.com",
+        "company": ""
+      },
+      "data": [
+        {
+          "id": "1",
+          "guid": "ac49fcc2-c5b8-47a6-b7d3-9bdfe6c7b68a",
+          "heading": "Intrduction",
+          "text": "<p>On conçoit une application pour trouver une balise cachée grâce aux informations captées par d'autres balises.</p>",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2022-10-07T08:22:06.028Z",
+              "docId": "001",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2022-10-07T08:22:13.669Z"
+            },
+            {
+              "attributesChanged": {
+                "text": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2022-10-07T08:29:46.741Z"
+            }
+          ],
+          "children": [
+            {
+              "id": "10",
+              "guid": "841cde82-3121-414e-8ed0-05cb6b3d4433",
+              "deleted": true,
+              "history": [
+                {
+                  "affectedNodeId": "1",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:46.069Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "deleted": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:55.633Z"
+                }
+              ]
+            },
+            {
+              "id": "11",
+              "guid": "0c4099fe-16c0-4ec6-9054-f2706d2d5500",
+              "deleted": true,
+              "history": [
+                {
+                  "affectedNodeId": "1",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:46.289Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "deleted": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:54.559Z"
+                }
+              ]
+            },
+            {
+              "id": "12",
+              "guid": "efe5b788-2045-4a18-91b1-6779636a4f50",
+              "deleted": true,
+              "history": [
+                {
+                  "affectedNodeId": "1",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:46.508Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "deleted": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:53.383Z"
+                }
+              ]
+            },
+            {
+              "id": "13",
+              "guid": "7e599f96-2017-4d56-86c3-e86383c145f7",
+              "deleted": true,
+              "history": [
+                {
+                  "affectedNodeId": "1",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:46.699Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "deleted": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:52.132Z"
+                }
+              ]
+            },
+            {
+              "id": "9",
+              "guid": "c7e0c7ab-b8b5-49fd-84bf-82947b823454",
+              "history": [
+                {
+                  "affectedNodeId": "1",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:41.626Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "affectedNodeId": "10",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:29:48.880Z",
+                  "docId": "001",
+                  "structureAction": "SwapDown"
+                },
+                {
+                  "affectedNodeId": "11",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:29:49.298Z",
+                  "docId": "001",
+                  "structureAction": "SwapDown"
+                },
+                {
+                  "affectedNodeId": "12",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:29:49.496Z",
+                  "docId": "001",
+                  "structureAction": "SwapDown"
+                },
+                {
+                  "affectedNodeId": "13",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:29:49.716Z",
+                  "docId": "001",
+                  "structureAction": "SwapDown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "guid": "156f40de-d6e1-42bf-8f91-34869e881576",
+          "heading": "Exigences fonctionnelles",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2022-10-07T08:22:18.338Z",
+              "docId": "001",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2022-10-07T08:22:32.285Z"
+            }
+          ],
+          "children": [
+            {
+              "id": "4",
+              "guid": "77d2efd9-0d9f-49f5-b0ec-be3411c96049",
+              "heading": "L'application capte les signaux bluetooth",
+              "history": [
+                {
+                  "affectedNodeId": "2",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:23:05.169Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:23:43.716Z"
+                }
+              ]
+            },
+            {
+              "id": "5",
+              "guid": "1c587d73-98b9-4bf6-91b4-a5ccff4826ba",
+              "heading": "L'application affiche les informations des signaux captés",
+              "history": [
+                {
+                  "affectedNodeId": "2",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:23:49.943Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:24:19.168Z"
+                }
+              ]
+            },
+            {
+              "id": "6",
+              "guid": "54fe105c-3f2c-46c6-b2cf-c563c9ece6c0",
+              "heading": "L'application enregistre les informations des signaux captés",
+              "history": [
+                {
+                  "affectedNodeId": "2",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:24:51.221Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:25:22.970Z"
+                }
+              ]
+            },
+            {
+              "id": "14",
+              "guid": "e43826e6-b7f3-43cd-89eb-60eefa0bcade",
+              "heading": "L'application a deux modes",
+              "history": [
+                {
+                  "affectedNodeId": "2",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:30:16.048Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:30:39.045Z"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": "La balise a deux modes"
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:33:38.148Z"
+                }
+              ],
+              "children": [
+                {
+                  "id": "15",
+                  "guid": "9bca837e-5db2-4455-8c38-b75aa9e4ea5b",
+                  "heading": "Un mode apprentissage qui detecte les signaux bluetooth",
+                  "history": [
+                    {
+                      "affectedNodeId": "14",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2022-10-07T08:30:41.642Z",
+                      "docId": "001",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2022-10-07T08:31:30.205Z"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": "un mode apprentissage qui detecte les signaux bluetooth"
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2022-10-07T08:32:20.385Z"
+                    }
+                  ]
+                },
+                {
+                  "id": "16",
+                  "guid": "54bf2eab-0213-4f71-b836-da86ad53eb21",
+                  "heading": "Un mode qui permet de trouver la balise cachée",
+                  "history": [
+                    {
+                      "affectedNodeId": "14",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2022-10-07T08:31:32.343Z",
+                      "docId": "001",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2022-10-07T08:32:15.558Z"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "guid": "938c0dba-6490-48fe-9592-7b4e36f2bbab",
+          "heading": "Exigences extra fonctionnelles",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2022-10-07T08:22:33.783Z",
+              "docId": "001",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2022-10-07T08:22:46.452Z"
+            }
+          ],
+          "children": [
+            {
+              "id": "7",
+              "guid": "45841980-e2e7-43b1-9f8b-8fa1fb3514ee",
+              "heading": "L'application fonctionne sur Android",
+              "history": [
+                {
+                  "affectedNodeId": "3",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:26:16.990Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:26:31.592Z"
+                }
+              ]
+            },
+            {
+              "id": "8",
+              "guid": "7374ae75-84ac-4ad9-92bd-fe452d9a6a8a",
+              "heading": "L'application est développée avec JAVA",
+              "history": [
+                {
+                  "affectedNodeId": "3",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:26:50.673Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:27:23.600Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "attributes": {
+      },
+      "view": {
+        "columns": [
+          {
+            "columnId": "id",
+            "hidden": false,
+            "width": 65
+          },
+          {
+            "columnId": "description",
+            "hidden": false,
+            "width": 500
+          },
+          {
+            "columnId": "attributes",
+            "hidden": true,
+            "width": 300
+          },
+          {
+            "columnId": "discussion",
+            "hidden": true,
+            "width": 300
+          },
+          {
+            "columnId": "links",
+            "hidden": true,
+            "width": 300
+          }
+        ]
+      }
+    }
+  ],
+  "attachments": {
+  },
+  "traceability": {
+    "reference": {
+      "name": "Reference",
+      "source": "References",
+      "target": "Referenced by"
+    }
+  },
+  "metadata": {
+    "format": "2.15",
+    "saveHistory": true
+  }
+}
