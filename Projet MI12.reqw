@@ -4,14 +4,14 @@
     {
       "id": "001",
       "guid": "5e8d712a-90f6-496f-9482-41aefd6ad7be",
-      "lastId": 16,
+      "lastId": 17,
       "createdOn": "2022-10-07T08:22:02.001Z",
       "createdBy": {
         "name": "Xinghua SHAO",
         "email": "1156883877@qq.com",
         "company": ""
       },
-      "lastChangedOn": "2022-10-07T08:33:38.148Z",
+      "lastChangedOn": "2022-10-07T09:00:36.770Z",
       "lastChangedBy": {
         "name": "Xinghua SHAO",
         "email": "1156883877@qq.com",
@@ -551,6 +551,35 @@
                     "name": "Xinghua SHAO"
                   },
                   "changedOn": "2022-10-07T08:27:23.600Z"
+                }
+              ]
+            },
+            {
+              "id": "17",
+              "guid": "a5b2ca14-c02e-4f53-9ad1-3c447570452d",
+              "heading": "L'application fonctionne à partir d'Android 5",
+              "history": [
+                {
+                  "affectedNodeId": "3",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T08:56:24.157Z",
+                  "docId": "001",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2022-10-07T09:00:36.770Z"
                 }
               ]
             }
