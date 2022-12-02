@@ -20,17 +20,18 @@ public class MainActivity extends ListActivity {
     protected boolean mScanning = false;
     private Handler handler;
 
-    protected int rsiAverage;
+//    protected int rsiAverage;
 
-    protected boolean block = false;
-    private static final long SCAN_PERIOD = 10000;
+//    protected boolean block = false;
+//    private static final long SCAN_PERIOD = 10000;
 
-    private List<Integer> rsiList = new ArrayList<>();
+//    private List<Integer> rsiList = new ArrayList<>();
 
-    private DeviceScanActivity.Ble mBle;
+//    private DeviceScanActivity.Ble mBle;
 //    private boolean mScanning;
 
     private DeviceScanActivity ScanActivity;
+    private DeviceScanActivity ScanActivity2;
 
 
     @Override
@@ -66,6 +67,15 @@ public class MainActivity extends ListActivity {
         //启动扫描
 //        ScanActivity.scanLeDevice(true);
         //
+
+        //实例化扫描类
+        ScanActivity2 = new DeviceScanActivity();
+        ScanActivity2.bluetoothAdapter = bluetoothAdapter;
+        //实例化Ble类
+        ScanActivity2.makeBleInstance();
+        //启动扫描
+//        ScanActivity.scanLeDevice(true);
+        //
     }
 
     @Override
@@ -91,11 +101,13 @@ public class MainActivity extends ListActivity {
 //                mLeDeviceListAdapter.clear();
 //                scanLeDevice(true);
                 ScanActivity.scanLeDevice(true);
+                ScanActivity2.scanLeDevice(true);
 
                 break;
             case R.id.menu_stop:
 //                scanLeDevice(false);
                 ScanActivity.scanLeDevice(false);
+                ScanActivity2.scanLeDevice(false);
                 break;
         }
         return true;

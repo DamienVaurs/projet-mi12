@@ -20,13 +20,15 @@ public class DeviceScanActivity extends ListActivity{
     protected boolean block = false;
     private static final long SCAN_PERIOD = 10000;
 
-    private List<Integer> rsiList = new ArrayList<>();
+    private List<Integer> rsiList1 = new ArrayList<>();
+    private List<Integer> rsiList2 = new ArrayList<>();
 
     private Ble mBle;
 
     public void scanLeDevice(final boolean enable){
         block = false;
-        rsiList.clear();
+        rsiList1.clear();
+        rsiList2.clear();
         if (enable) {
             handler = new Handler();
             handler.postDelayed(new Runnable() {
@@ -35,6 +37,10 @@ public class DeviceScanActivity extends ListActivity{
                     mScanning = false;
                     bluetoothAdapter.stopLeScan(leScanCallback);
                     rsiAverage = getRsiAverage();
+                    System.out.println("RSILIST: " + rsiList1) ;
+                    System.out.println("RSILIST: " + rsiList2) ;
+                    System.out.println(rsiAverage);
+                    /*
                     if (rsiAverage<-100){
                         mBle.doBlock();
                     }else if (rsiAverage==0){
@@ -44,7 +50,7 @@ public class DeviceScanActivity extends ListActivity{
                     }else {
                         System.out.println("=====scanLeDevice()=====");
                         scanLeDevice(true);
-                    }
+                    }*/
                 }
             },SCAN_PERIOD);
             mScanning = true;
@@ -67,8 +73,14 @@ public class DeviceScanActivity extends ListActivity{
                             if (device.getAddress().equals("C5:32:52:D1:10:02")) {
                                 System.out.println("device name: " + device.getName() + ",   device address: " + device.getAddress() + ", rssi: " + rssi);
 //                                rsiList.clear();
-                                rsiList.add(rssi);
-                                System.out.println(rsiList) ;
+                                rsiList1.add(rssi);
+                                System.out.println("RSILIST1: " + rsiList1) ;
+                            }
+                            if (device.getAddress().equals("E8:69:A8:6A:24:02")){
+                                System.out.println("device name: " + device.getName() + ",   device address: " + device.getAddress() + ", rssi: " + rssi);
+//                                rsiList.clear();
+                                rsiList2.add(rssi);
+                                System.out.println("RSILIST2: " + rsiList2) ;
                             }
                         }
                     });
@@ -79,12 +91,12 @@ public class DeviceScanActivity extends ListActivity{
         int sum = 0;
         int num = 1;
         int avrage = 0;
-        System.out.println("Rssi"+ rsiList);
-        for (int j = 0; j < rsiList.size(); j++) {
-            sum = sum + rsiList.get(j);
+        System.out.println("Rssi"+ rsiList1);
+        for (int j = 0; j < rsiList1.size(); j++) {
+            sum = sum + rsiList1.get(j);
         }
-        num = rsiList.size();
-        if(rsiList.size() == 0){
+        num = rsiList1.size();
+        if(rsiList1.size() == 0){
             num = 1;
             bluetoothAdapter.stopLeScan(leScanCallback);
         }
