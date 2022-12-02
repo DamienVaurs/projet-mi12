@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.os.Handler;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,8 +66,9 @@ public class DeviceScanActivity extends ListActivity{
                         public void run() {
                             if (device.getAddress().equals("C5:32:52:D1:10:02")) {
                                 System.out.println("device name: " + device.getName() + ",   device address: " + device.getAddress() + ", rssi: " + rssi);
-                                rsiList.clear();
+//                                rsiList.clear();
                                 rsiList.add(rssi);
+                                System.out.println(rsiList) ;
                             }
                         }
                     });

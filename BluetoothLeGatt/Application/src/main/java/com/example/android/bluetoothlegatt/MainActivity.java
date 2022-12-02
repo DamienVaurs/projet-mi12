@@ -2,13 +2,36 @@ package com.example.android.bluetoothlegatt;
 
 import android.app.ListActivity;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends ListActivity {
+    public BluetoothAdapter bluetoothAdapter;
+    protected boolean mScanning = false;
+    private Handler handler;
+
+    protected int rsiAverage;
+
+    protected boolean block = false;
+    private static final long SCAN_PERIOD = 10000;
+
+    private List<Integer> rsiList = new ArrayList<>();
+
+    private DeviceScanActivity.Ble mBle;
+//    private boolean mScanning;
+
+    private DeviceScanActivity ScanActivity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +56,49 @@ public class MainActivity extends ListActivity {
             Toast.makeText(this, R.string.turn_on_ble, Toast.LENGTH_SHORT).show();
         }
 
+
+
         //实例化扫描类
-        DeviceScanActivity ScanActivity = new DeviceScanActivity();
+        ScanActivity = new DeviceScanActivity();
         ScanActivity.bluetoothAdapter = bluetoothAdapter;
         //实例化Ble类
         ScanActivity.makeBleInstance();
         //启动扫描
-        ScanActivity.scanLeDevice(true);
+//        ScanActivity.scanLeDevice(true);
         //
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        if (!mScanning) {
+            menu.findItem(R.id.menu_stop).setVisible(false);
+            menu.findItem(R.id.menu_scan).setVisible(true);
+            menu.findItem(R.id.menu_refresh).setActionView(null);
+        } else {
+            menu.findItem(R.id.menu_stop).setVisible(true);
+            menu.findItem(R.id.menu_scan).setVisible(false);
+            menu.findItem(R.id.menu_refresh).setActionView(
+                    R.layout.actionbar_indeterminate_progress);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_scan:
+//                mLeDeviceListAdapter.clear();
+//                scanLeDevice(true);
+                ScanActivity.scanLeDevice(true);
+
+                break;
+            case R.id.menu_stop:
+//                scanLeDevice(false);
+                ScanActivity.scanLeDevice(false);
+                break;
+        }
+        return true;
+    }
+
 }

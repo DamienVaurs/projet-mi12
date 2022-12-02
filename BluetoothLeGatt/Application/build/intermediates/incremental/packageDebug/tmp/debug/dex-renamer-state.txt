@@ -1,4 +1,4 @@
-#Thu Dec 01 14:50:47 CET 2022
+#Fri Dec 02 11:17:30 CET 2022
 base.0=C\:\\Users\\11568\\Desktop\\BluetoothLeGatt\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
