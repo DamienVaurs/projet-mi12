@@ -36,7 +36,7 @@ public class DeviceScanActivity extends ListActivity{
                 public void run() {
                     mScanning = false;
                     bluetoothAdapter.stopLeScan(leScanCallback);
-                    rsiAverage = getRsiAverage();
+                    //rsiAverage = getRsiAverage();
                     System.out.println("RSILIST: " + rsiList1) ;
                     System.out.println("RSILIST: " + rsiList2) ;
                     System.out.println(rsiAverage);
@@ -84,19 +84,21 @@ public class DeviceScanActivity extends ListActivity{
                             }
                         }
                     });
+                    int average1 = getRsiAverage(rsiList1);
+                    System.out.println("Average = " + average1);
                 }
             };
 
-    public int getRsiAverage() {
+    public int getRsiAverage(List rssi) {
         int sum = 0;
         int num = 1;
         int avrage = 0;
-        System.out.println("Rssi"+ rsiList1);
-        for (int j = 0; j < rsiList1.size(); j++) {
-            sum = sum + rsiList1.get(j);
+        System.out.println("Rssi"+ rssi);
+        for (int j = 0; j < rssi.size(); j++) {
+            sum = sum + ((Integer)rssi.get(j)).intValue();
         }
-        num = rsiList1.size();
-        if(rsiList1.size() == 0){
+        num = rssi.size();
+        if(rssi.size() == 0){
             num = 1;
             bluetoothAdapter.stopLeScan(leScanCallback);
         }
