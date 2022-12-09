@@ -25,7 +25,7 @@ public class DeviceScanActivity extends ListActivity{
     private List<Integer> rsiList2 = new ArrayList<>();
     HashMap<String, List<Integer> > capitalCities = new HashMap<String, List<Integer>>();
 
-
+    HashMap<String, Integer>[][] tableau = new HashMap[8][14];
 
     private Ble mBle;
 
@@ -46,9 +46,19 @@ public class DeviceScanActivity extends ListActivity{
                     System.out.println("RSILIST: " + rsiList2) ;
                     System.out.println("C5:32:52:D1:10:02 RSSILIST: " + capitalCities.get("C5:32:52:D1:10:02").toString());
                     rsiAverage = getRsiAverage("C5:32:52:D1:10:02");
-                    System.out.println("E8:69:A8:6A:24:02 RSSILIST: " + capitalCities.get("E8:69:A8:6A:24:02").toString());
-                    rsiAverage = getRsiAverage("E8:69:A8:6A:24:02");
-                    System.out.println(rsiAverage);
+
+                    // pour tester HashMap tableau
+                    HashMap<String, Integer> test = new HashMap<>();
+                    test.put("C5:32:52:D1:10:02", rsiAverage);
+
+
+//                    System.out.println("E8:69:A8:6A:24:02 RSSILIST: " + capitalCities.get("E8:69:A8:6A:24:02").toString());
+//                    rsiAverage = getRsiAverage("E8:69:A8:6A:24:02");
+//                    test.put("E8:69:A8:6A:24:02", rsiAverage);
+                    tableau[0][0] = test;
+                    System.out.println("tableau[1][1]: " + tableau[0][0]);
+//                    System.out.println(rsiAverage);
+
                     /*
                     if (rsiAverage<-100){
                         mBle.doBlock();
