@@ -25,6 +25,8 @@ public class DeviceScanActivity extends ListActivity{
     private List<Integer> rsiList2 = new ArrayList<>();
     HashMap<String, List<Integer> > capitalCities = new HashMap<String, List<Integer>>();
 
+
+
     private Ble mBle;
 
     public void scanLeDevice(final boolean enable){
@@ -42,7 +44,10 @@ public class DeviceScanActivity extends ListActivity{
                     //rsiAverage = getRsiAverage();
                     System.out.println("RSILIST: " + rsiList1) ;
                     System.out.println("RSILIST: " + rsiList2) ;
-                    System.out.println("RSILIST: " + capitalCities.get("C5:32:52:D1:10:02").toString());
+                    System.out.println("C5:32:52:D1:10:02 RSSILIST: " + capitalCities.get("C5:32:52:D1:10:02").toString());
+                    rsiAverage = getRsiAverage("C5:32:52:D1:10:02");
+                    System.out.println("E8:69:A8:6A:24:02 RSSILIST: " + capitalCities.get("E8:69:A8:6A:24:02").toString());
+                    rsiAverage = getRsiAverage("E8:69:A8:6A:24:02");
                     System.out.println(rsiAverage);
                     /*
                     if (rsiAverage<-100){
@@ -75,17 +80,18 @@ public class DeviceScanActivity extends ListActivity{
                         @Override
                         public void run() {
                             if (device.getAddress().equals("C5:32:52:D1:10:02")) {
-                                System.out.println("device name: " + device.getName() + ",   device address: " + device.getAddress() + ", rssi: " + rssi);
+//                                System.out.println("device name: " + device.getName() + ",   device address: " + device.getAddress() + ", rssi: " + rssi);
 //                                rsiList.clear();
                                 rsiList1.add(rssi);
                                 capitalCities.put("C5:32:52:D1:10:02", rsiList1);
-                                System.out.println("RSILIST1: " + rsiList1) ;
+//                                System.out.println("RSILIST1: " + rsiList1);
                             }
                             if (device.getAddress().equals("E8:69:A8:6A:24:02")){
-                                System.out.println("device name: " + device.getName() + ",   device address: " + device.getAddress() + ", rssi: " + rssi);
+//                                System.out.println("device name: " + device.getName() + ",   device address: " + device.getAddress() + ", rssi: " + rssi);
 //                                rsiList.clear();
                                 rsiList2.add(rssi);
-                                System.out.println("RSILIST2: " + rsiList2) ;
+                                capitalCities.put("E8:69:A8:6A:24:02", rsiList2);
+//                                System.out.println("RSILIST2: " + rsiList2) ;
                             }
                         }
                     });
@@ -94,11 +100,12 @@ public class DeviceScanActivity extends ListActivity{
                 }
             };
 
-    public int getRsiAverage(List rssi) {
+    public int getRsiAverage(String address) {
         int sum = 0;
         int num = 1;
         int avrage = 0;
-        System.out.println("Rssi"+ rssi);
+//        System.out.println("Rssi"+ rssi);
+        List<Integer> rssi = capitalCities.get(address);
         for (int j = 0; j < rssi.size(); j++) {
             sum = sum + ((Integer)rssi.get(j)).intValue();
         }
@@ -112,7 +119,6 @@ public class DeviceScanActivity extends ListActivity{
         System.out.println("avrage: " + avrage);
         return avrage;
     }
-
     public void makeBleInstance(){
         mBle = new Ble();
         mBle.setBleListener(new BleListener(){
