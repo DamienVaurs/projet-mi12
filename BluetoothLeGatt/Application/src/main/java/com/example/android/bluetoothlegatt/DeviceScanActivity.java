@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class DeviceScanActivity extends ListActivity{
@@ -22,6 +23,7 @@ public class DeviceScanActivity extends ListActivity{
 
     private List<Integer> rsiList1 = new ArrayList<>();
     private List<Integer> rsiList2 = new ArrayList<>();
+    HashMap<String, List<Integer> > capitalCities = new HashMap<String, List<Integer>>();
 
     private Ble mBle;
 
@@ -29,6 +31,7 @@ public class DeviceScanActivity extends ListActivity{
         block = false;
         rsiList1.clear();
         rsiList2.clear();
+        capitalCities.clear();
         if (enable) {
             handler = new Handler();
             handler.postDelayed(new Runnable() {
@@ -39,6 +42,7 @@ public class DeviceScanActivity extends ListActivity{
                     //rsiAverage = getRsiAverage();
                     System.out.println("RSILIST: " + rsiList1) ;
                     System.out.println("RSILIST: " + rsiList2) ;
+                    System.out.println("RSILIST: " + capitalCities.get("C5:32:52:D1:10:02").toString());
                     System.out.println(rsiAverage);
                     /*
                     if (rsiAverage<-100){
@@ -74,6 +78,7 @@ public class DeviceScanActivity extends ListActivity{
                                 System.out.println("device name: " + device.getName() + ",   device address: " + device.getAddress() + ", rssi: " + rssi);
 //                                rsiList.clear();
                                 rsiList1.add(rssi);
+                                capitalCities.put("C5:32:52:D1:10:02", rsiList1);
                                 System.out.println("RSILIST1: " + rsiList1) ;
                             }
                             if (device.getAddress().equals("E8:69:A8:6A:24:02")){
@@ -84,8 +89,8 @@ public class DeviceScanActivity extends ListActivity{
                             }
                         }
                     });
-                    int average1 = getRsiAverage(rsiList1);
-                    System.out.println("Average = " + average1);
+//                    int average1 = getRsiAverage(rsiList1);
+//                    System.out.println("Average = " + average1);
                 }
             };
 
