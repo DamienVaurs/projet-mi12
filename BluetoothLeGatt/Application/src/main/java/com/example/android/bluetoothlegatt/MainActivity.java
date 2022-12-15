@@ -100,14 +100,16 @@ public class MainActivity extends ListActivity {
             case R.id.menu_scan:
 //                mLeDeviceListAdapter.clear();
 //                scanLeDevice(true);
+                mScanning = true;
                 ScanActivity.scanLeDevice(true);
-                ScanActivity2.scanLeDevice(true);
+//                ScanActivity2.scanLeDevice(true);
 
                 break;
             case R.id.menu_stop:
 //                scanLeDevice(false);
+//                mScanning = false;
                 ScanActivity.scanLeDevice(false);
-                ScanActivity2.scanLeDevice(false);
+//                ScanActivity2.scanLeDevice(false);
                 break;
         }
         return true;
