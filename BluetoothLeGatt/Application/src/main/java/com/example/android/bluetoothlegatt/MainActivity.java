@@ -5,11 +5,14 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -17,7 +20,8 @@ import java.util.List;
 
 public class MainActivity extends ListActivity {
     public BluetoothAdapter bluetoothAdapter;
-    protected boolean mScanning = false;
+//    public static boolean mScanning = false;
+    public boolean mScanning = false;
     private Handler handler;
 
 //    protected int rsiAverage;
@@ -34,12 +38,14 @@ public class MainActivity extends ListActivity {
     private DeviceScanActivity ScanActivity2;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         java.text.DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.afficher_infos);
         getActionBar().setTitle(R.string.title_devices);
+
 
         final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
 
@@ -101,18 +107,23 @@ public class MainActivity extends ListActivity {
 //                mLeDeviceListAdapter.clear();
 //                scanLeDevice(true);
                 mScanning = true;
+//                invalidateOptionsMenu();
+//                menu_scann.setVisibility[
+//                ]2    (View.GONE);
                 ScanActivity.scanLeDevice(true);
+
 //                ScanActivity2.scanLeDevice(true);
 
                 break;
             case R.id.menu_stop:
 //                scanLeDevice(false);
-//                mScanning = false;
+                mScanning = false;
+//                invalidatcceOptionsMenu();
                 ScanActivity.scanLeDevice(false);
+//                invalidateOptionsMenu();
 //                ScanActivity2.scanLeDevice(false);
                 break;
         }
         return true;
     }
-
 }

@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class DeviceScanActivity extends ListActivity{
     public BluetoothAdapter bluetoothAdapter;
-    protected boolean mScanning;
+    public boolean mScanning;
     private Handler handler;
 
     protected int rsiAverage;
@@ -37,6 +37,7 @@ public class DeviceScanActivity extends ListActivity{
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
+//                    MainActivity.mScanning = false;
                     mScanning = false;
                     bluetoothAdapter.stopLeScan(leScanCallback);
                     //rsiAverage = getRsiAverage();
@@ -67,14 +68,20 @@ public class DeviceScanActivity extends ListActivity{
                         System.out.println("=====scanLeDevice()=====");
                         scanLeDevice(true);
                     }*/
+//                    invalidateOptionsMenu();
                 }
             },SCAN_PERIOD);
+//            MainActivity.mScanning = true;
             mScanning = true;
+//            invalidateOptionsMenu();
             bluetoothAdapter.startLeScan(leScanCallback);
         }else {
+//            MainActivity.mScanning = false;
             mScanning = false;
+//            invalidateOptionsMenu();
             bluetoothAdapter.stopLeScan(leScanCallback);
         }
+//        invalidateOptionsMenu();
     }
 
 
