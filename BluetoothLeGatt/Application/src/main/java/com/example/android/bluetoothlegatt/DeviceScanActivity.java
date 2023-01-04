@@ -38,7 +38,7 @@ public class DeviceScanActivity extends ListActivity{
                 @Override
                 public void run() {
 //                    MainActivity.mScanning = false;
-                    mScanning = false;
+                    MainActivity.mScanning = false;
                     bluetoothAdapter.stopLeScan(leScanCallback);
                     //rsiAverage = getRsiAverage();
                     System.out.println("RSILIST: " + rsiList1) ;
@@ -71,13 +71,13 @@ public class DeviceScanActivity extends ListActivity{
 //                    invalidateOptionsMenu();
                 }
             },SCAN_PERIOD);
-//            MainActivity.mScanning = true;
-            mScanning = true;
+            MainActivity.mScanning = true;
+//            mScanning = true;
 //            invalidateOptionsMenu();
             bluetoothAdapter.startLeScan(leScanCallback);
         }else {
-//            MainActivity.mScanning = false;
-            mScanning = false;
+            MainActivity.mScanning = false;
+//            mScanning = false;
 //            invalidateOptionsMenu();
             bluetoothAdapter.stopLeScan(leScanCallback);
         }

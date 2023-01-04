@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -12,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.mi12.Measurement;
+import com.example.mi12.Point;
 import com.example.mi12.R;
 import com.example.mi12.databinding.FragmentMainBinding;
 
@@ -67,4 +71,5 @@ public class PlaceholderFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }

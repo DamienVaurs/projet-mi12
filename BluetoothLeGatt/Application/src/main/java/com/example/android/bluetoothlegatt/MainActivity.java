@@ -20,8 +20,8 @@ import java.util.List;
 
 public class MainActivity extends ListActivity {
     public BluetoothAdapter bluetoothAdapter;
-//    public static boolean mScanning = false;
-    public boolean mScanning = false;
+    public static boolean mScanning = false;
+//    public boolean mScanning = false;
     private Handler handler;
 
 //    protected int rsiAverage;
@@ -107,19 +107,21 @@ public class MainActivity extends ListActivity {
 //                mLeDeviceListAdapter.clear();
 //                scanLeDevice(true);
                 mScanning = true;
-//                invalidateOptionsMenu();
+                invalidateOptionsMenu();
 //                menu_scann.setVisibility[
 //                ]2    (View.GONE);
                 ScanActivity.scanLeDevice(true);
 
 //                ScanActivity2.scanLeDevice(true);
-
+//                mScanning = false;
+//                invalidateOptionsMenu();
                 break;
             case R.id.menu_stop:
 //                scanLeDevice(false);
                 mScanning = false;
-//                invalidatcceOptionsMenu();
+                invalidateOptionsMenu();
                 ScanActivity.scanLeDevice(false);
+//                mScanning = true;
 //                invalidateOptionsMenu();
 //                ScanActivity2.scanLeDevice(false);
                 break;

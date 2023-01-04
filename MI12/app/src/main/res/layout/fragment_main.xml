@@ -29,7 +29,9 @@
         android:text="Measure RSSI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:onClick="click_measure_rssi_button"
+        />
 
     <EditText
         android:id="@+id/x_input"
