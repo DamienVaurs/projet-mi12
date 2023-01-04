@@ -39,6 +39,7 @@ public class PlaceholderFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        System.out.print("TEST");
         super.onCreate(savedInstanceState);
         pageViewModel = new ViewModelProvider(this).get(PageViewModel.class);
         int index = 1;
