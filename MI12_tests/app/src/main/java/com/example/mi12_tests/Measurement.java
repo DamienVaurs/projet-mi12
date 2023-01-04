@@ -34,11 +34,6 @@ public class Measurement {
             // Bluetooth is not enabled
             return;
         }
-        Context context = null;
-        if (ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
-            // Bluetooth permission is not granted
-            return;
-        }
         final String address = deviceAddress;
         final List<Double> rssiList = new ArrayList<>();
         BluetoothAdapter.LeScanCallback leScanCallback = new BluetoothAdapter.LeScanCallback() {
