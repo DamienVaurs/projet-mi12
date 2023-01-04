@@ -3,6 +3,7 @@ package com.example.mi12_tests;
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
 import android.content.Context;
@@ -24,6 +25,7 @@ public class Measurement {
     }
 
     public Measurement(Point point, String deviceAddress) {
+        System.out.println("CONSTRUCTEUR");
         this.point = point;
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter == null) {
@@ -36,28 +38,30 @@ public class Measurement {
         }
         final String address = deviceAddress;
         final List<Double> rssiList = new ArrayList<>();
-        BluetoothAdapter.LeScanCallback leScanCallback = new BluetoothAdapter.LeScanCallback() {
+        ScanCallback scanCallback = new ScanCallback() {
             @Override
-            public void onLeScan(BluetoothDevice device, int rssi, byte[] scanRecord) {
-                if (device.getAddress().equals(address)) {
-                    rssiList.add((double) rssi);
+            public void onScanResult(int callbackType, ScanResult result) {
+                if (result.getDevice().getAddress().equals(address)) {
+                    rssiList.add((double) result.getRssi());
                 }
             }
         };
-        bluetoothAdapter.startLeScan(leScanCallback);
+        BluetoothLeScanner bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
+        bluetoothLeScanner.startScan(scanCallback);
         // Stop scan after 10 seconds
         try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        bluetoothAdapter.stopLeScan(leScanCallback);
+        bluetoothLeScanner.stopScan(scanCallback);
         // Calculate the mean RSSI
         double sum = 0;
         for (double r : rssiList) {
             sum += r;
         }
         this.rssi = sum / rssiList.size();
+        System.out.println(this.rssi);
     }
 
 

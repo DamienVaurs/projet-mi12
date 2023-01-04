@@ -21,9 +21,9 @@
 21
 22    <uses-sdk
 23        android:minSdkVersion="18"
-23-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+23-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
 24        android:targetSdkVersion="28" />
-24-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+24-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
 25
 26    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
 27
@@ -35,50 +35,50 @@
 33    PackageManager.hasSystemFeature(FEATURE_BLUETOOTH_LE)
 34    -->
 35    <uses-feature
-35-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:5-89
+35-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:5-89
 36        android:name="android.hardware.bluetooth_le"
-36-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:19-63
+36-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:19-63
 37        android:required="true" />
-37-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:64-87
+37-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:64-87
 38
 39    <uses-permission android:name="android.permission.BLUETOOTH" />
-39-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:33:5-67
-39-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:33:22-65
+39-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:33:5-67
+39-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:33:22-65
 40    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-40-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:5-73
-40-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:22-71
+40-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:5-73
+40-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:22-71
 41    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-41-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:5-78
-41-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:22-76
+41-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:5-78
+41-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:22-76
 42    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-42-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:36:5-80
-42-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:36:22-78
+42-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:36:5-80
+42-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:36:22-78
 43
 44    <application
-44-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:38:5-51:19
+44-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:38:5-51:19
 45        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-45-->[com.android.support:support-compat:28.0.0] C:\Users\11568\.gradle\caches\transforms-2\files-2.1\6f81025bcc413a318d3343580ec76047\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+45-->[com.android.support:support-compat:28.0.0] C:\Users\damie\.gradle\caches\transforms-2\files-2.1\6f81025bcc413a318d3343580ec76047\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 46        android:debuggable="true"
 47        android:icon="@drawable/ic_launcher"
-47-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:39:9-45
+47-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:39:9-45
 48        android:testOnly="true" >
 49        <activity
-49-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:42:9-50:20
+49-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:42:9-50:20
 50            android:name="com.example.android.bluetoothlegatt.MainActivity"
-50-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:43:13-41
+50-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:43:13-41
 51            android:label="YourAppName"
-51-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:44:13-40
+51-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:44:13-40
 52            android:theme="@android:style/Theme.Holo.Light" >
-52-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:45:13-60
+52-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:45:13-60
 53            <intent-filter>
-53-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:46:13-49:29
+53-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:46:13-49:29
 54                <action android:name="android.intent.action.MAIN" />
-54-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:47:17-69
-54-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:47:25-66
+54-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:47:17-69
+54-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:47:25-66
 55
 56                <category android:name="android.intent.category.LAUNCHER" />
-56-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:48:17-77
-56-->C:\UTC\GI04\MI12\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:48:27-74
+56-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:48:17-77
+56-->C:\Users\damie\Documents\GI02\MI12\Projet\projet-mi12\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:48:27-74
 57            </intent-filter>
 58        </activity>
 59    </application>
