@@ -1,5 +1,6 @@
-package com.example.android.bluetoothlegatt;
+package com.example.mi12_tests;
 
+import android.annotation.SuppressLint;
 import android.app.ListActivity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -35,6 +36,7 @@ public class DeviceScanActivity extends ListActivity{
         if (enable) {
             handler = new Handler();
             handler.postDelayed(new Runnable() {
+                @SuppressLint("MissingPermission")
                 @Override
                 public void run() {
 //                    MainActivity.mScanning = false;

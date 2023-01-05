@@ -29,10 +29,12 @@ public class Measurement {
         this.point = point;
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter == null) {
+            System.out.println("NOT BLUETOOTH");
             // Device does not support Bluetooth
             return;
         }
         if (!bluetoothAdapter.isEnabled()) {
+            System.out.println("BLUETOOTH NOT ENABLED");
             // Bluetooth is not enabled
             return;
         }
@@ -41,8 +43,10 @@ public class Measurement {
         ScanCallback scanCallback = new ScanCallback() {
             @Override
             public void onScanResult(int callbackType, ScanResult result) {
+                System.out.println("onScanResult");
                 if (result.getDevice().getAddress().equals(address)) {
                     rssiList.add((double) result.getRssi());
+                    System.out.println("Rssilist : " + rssiList);
                 }
             }
         };

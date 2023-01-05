@@ -26,4 +26,9 @@
           android:title="@string/menu_stop"
           android:orderInCategory="101"
           android:showAsAction="ifRoom|withText"/>
+
+
+
 </menu>
+
+
