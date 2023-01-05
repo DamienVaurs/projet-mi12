@@ -12,9 +12,11 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -25,18 +27,31 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_ENABLE_BT = 456;
     private static final int REQUEST_ENABLE_LOCATION = 457;
     private Button btnScan;
+    private Button btnMeasure;
+    private Point point;
+    private String address;
 
     public BluetoothAdapter bluetoothAdapter;
     public static boolean mScanning = false;
 
-    private List<com.example.mi12_tests.Measurement> measurements = new ArrayList<>();
+    //private List<com.example.mi12_tests.Measurement> measurements = new ArrayList<>();
 
     private DeviceScanActivity ScanActivity;
     private DeviceScanActivity ScanActivity2;
 
+    private List<Measurement> measurements = new ArrayList<>();
+
+    private Handler handler;
+
+    private double rssi_moy;
+
+    public MainActivity() {
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -82,11 +97,60 @@ public class MainActivity extends AppCompatActivity {
                 ScanActivity.bluetoothAdapter = bluetoothAdapter;
                 ScanActivity.makeBleInstance();
                 mScanning = true;
-                ScanActivity.scanLeDevice(true);
+
+                EditText xInput = findViewById(R.id.x_input);
+                EditText yInput = findViewById(R.id.y_input);
+                double x = Double.parseDouble(xInput.getText().toString());
+                double y = Double.parseDouble(yInput.getText().toString());
+                System.out.println("Points : " + x + " " + y);
+                point = new Point(x, y);
+                // Ask the user to input the device address
+                EditText addressInput = findViewById(R.id.address_input);
+                address = addressInput.getText().toString();
+                System.out.println("Adresse : " + address);
+
+                // rssi_moy = ScanActivity.scanLeDevice(true, address, point);
+                try {
+                    rssi_moy = ScanActivity.scanLeDevice(true, address, point);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Rssi Scan Retourne : " + rssi_moy);
+
+                //Measurement measure = new Measurement(point, ScanActivity.scanLeDevice(true, address, point));
+                //measurements.add(measure);
+
+                //handler = new Handler();
+                //handler.postDelayed(new Runnable() {
+
+                  //  @Override
+                    //public void run() {
+                      //  System.out.println("Rssi Moy : " + rssi_moy);
+                        //Measurement measure = new Measurement(point, rssi_moy);
+                        //measurements.add(measure);
+                   // }
+
+                //},11000);
+
             }
         });
 
+        btnMeasure = findViewById( R.id.btnMeasure );
+        //btnScan.setOnClickListener( btnScanLister );
 
+        btnMeasure.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                rssi_moy = ScanActivity.getRssiMoyen();
+                System.out.println("Point X : " + point.getX());
+                System.out.println("RSSI MOY : " + rssi_moy);
+                Measurement measure = new Measurement(point, rssi_moy);
+                System.out.println("Point : " + measure.getPoint() + "Rssi : " + measure.getRssi());
+                measurements.add(measure);
+
+            }
+        });
 
 
         final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
@@ -119,25 +183,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println("Clicked MEASURE RSSI Button");
-                // Ask the user to input the point coordinates
-                EditText xInput = findViewById(R.id.x_input);
-                EditText yInput = findViewById(R.id.y_input);
-                double x = Double.parseDouble(xInput.getText().toString());
-                double y = Double.parseDouble(yInput.getText().toString());
-                System.out.println("Points : " + x + " " + y);
-                Point point = new Point(x, y);
-                // Ask the user to input the device address
-                EditText addressInput = findViewById(R.id.address_input);
-                String address = addressInput.getText().toString();
-                System.out.println("Adresse : " + address);
-                mScanning = true;
-//                menu_scann.setVisibility[
-//                ]2    (View.GONE);
-                ScanActivity.scanLeDevice(true);
-                // Create a measurement with the point and device address
-                //Measurement measurement = new Measurement(point, address);
-                // Add the measurement to the list
-                //measurements.add(measurement);
+                 Point balise = Measurement.getPosition(measurements);
+
+                TextView textView = findViewById(R.id.text_view);
+                String message = " X : " + balise.getX() + " " + "Y : " + balise.getY();
+                textView.setText(message);
+
             }
         });
 
