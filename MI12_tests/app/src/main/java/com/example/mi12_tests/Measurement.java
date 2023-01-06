@@ -19,9 +19,11 @@ import java.util.Map;
 public class Measurement {
     private Point point;
     private double rssi;
+
     public Point getPoint() {
         return point;
     }
+
     public double getRssi() {
         return rssi;
     }
@@ -34,7 +36,6 @@ public class Measurement {
         System.out.println("Point Y : " + this.point.getY());
         System.out.println("RSSI : " + this.rssi);
     }
-
 
     public static Point getPosition(List<Measurement> measurements) {
         // Create a map of RSSI values
@@ -93,8 +94,5 @@ public class Measurement {
             return new Point(x, y);
         }
     }
-
-
-
 }
 
