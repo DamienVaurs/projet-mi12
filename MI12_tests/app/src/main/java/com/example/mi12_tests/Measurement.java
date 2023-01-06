@@ -65,7 +65,6 @@ public class Measurement {
     }
 
     private static Point interpolate(Map<Point, Double> map, Point bestPoint) {
-        // Find the surrounding points with the highest RSSI
         Point p1 = new Point(0,0), p2 = new Point(0,0);
         double r1 = -100, r2 = -100;
         for (Map.Entry<Point, Double> entry : map.entrySet()) {
@@ -83,9 +82,7 @@ public class Measurement {
                 }
             }
         }
-        // Interpolate the position of the tag
         if (p1 == null || p2 == null || r1 == -100 || r2 == -100) {
-            // Cannot interpolate, return the best point
             return bestPoint;
         } else {
             double x = (bestPoint.getX() * r2 - p2.getX() * r1) / (r2 - r1);
