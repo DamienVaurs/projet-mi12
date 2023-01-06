@@ -88,8 +88,8 @@ public class Measurement {
             System.out.println("Pas d'interpolation");
             return bestPoint;
         } else {
-            double x = (bestPoint.getX() * abs(r2) - p2.getX() * r1) / (r2 - r1);
-            double y = (bestPoint.getY() * r2 - p2.getY() * r1) / (r2 - r1);
+            double x = (bestPoint.getX() * Math.abs(r2) - p2.getX() * Math.abs(r1)) / (Math.abs(r2) - Math.abs(r1));
+            double y = (bestPoint.getY() * Math.abs(r2) - p2.getY() * Math.abs(r1)) / (Math.abs(r2) - Math.abs(r1));
             System.out.println("Interpolate X : " + x);
             return new Point(x, y);
         }
