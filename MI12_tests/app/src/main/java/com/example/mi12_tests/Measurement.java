@@ -74,18 +74,21 @@ public class Measurement {
                 if (rssi > r1) {
                     p1 = point;
                     r1 = rssi;
+                    System.out.println("Nouveau r1 : " + r1);
                 }
             } else if (point.getX() > bestPoint.getX() || (point.getX() == bestPoint.getX() && point.getY() > bestPoint.getY())) {
                 if (rssi > r2) {
                     p2 = point;
                     r2 = rssi;
+                    System.out.println("Nouveau r2 : " + r2);
                 }
             }
         }
         if (p1 == null || p2 == null || r1 == -100 || r2 == -100) {
+            System.out.println("Pas d'interpolation");
             return bestPoint;
         } else {
-            double x = (bestPoint.getX() * r2 - p2.getX() * r1) / (r2 - r1);
+            double x = (bestPoint.getX() * abs(r2) - p2.getX() * r1) / (r2 - r1);
             double y = (bestPoint.getY() * r2 - p2.getY() * r1) / (r2 - r1);
             System.out.println("Interpolate X : " + x);
             return new Point(x, y);

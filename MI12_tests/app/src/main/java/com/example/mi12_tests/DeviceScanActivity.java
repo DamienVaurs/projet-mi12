@@ -65,14 +65,18 @@ public class DeviceScanActivity extends ListActivity{
 //                    MainActivity.mScanning = false;
                     MainActivity.mScanning = false;
                     bluetoothAdapter.stopLeScan(leScanCallback);
+                    if (rsiList1 == null) {
+                        rsiList1.add(-100);
+                        capitalCities.put(address, rsiList1);
+                    }
                     System.out.println("RSILIST: " + rsiList1) ;
 //                    System.out.println("RSILIST: " + rsiList2) ;
-                    System.out.println("C5:32:52:D1:10:02 RSSILIST: " + capitalCities.get("C5:32:52:D1:10:02").toString());
-                    rsiAverage = getRsiAverage(address);
+                    //System.out.println("C5:32:52:D1:10:02 RSSILIST: " + Objects.requireNonNull(capitalCities.get(address)));
+                    rsiAverage = getRsiAverage(rsiList1);
                     System.out.println("C5:32:52:D1:10:02 Average: " + rsiAverage);
                     saveRssi("C5:32:52:D1:10:02");
 
-                    System.out.println("tableau[0][0]: " + tableau[0][0]);
+                    //System.out.println("tableau[0][0]: " + tableau[0][0]);
 
                     //Measurement measurement = new Measurement(point, rsiAverage);
                     //measurements.add(measurement);
@@ -98,7 +102,7 @@ public class DeviceScanActivity extends ListActivity{
 
 
     public void saveRssi(String address) {
-        getRsiAverage(address);
+        //getRsiAverage(address);
         // pour tester HashMap tableau
         HashMap<String, Integer> test = new HashMap<>();
         test.put("C5:32:52:D1:10:02", rsiAverage);
@@ -109,11 +113,12 @@ public class DeviceScanActivity extends ListActivity{
         return rsiAverage;
     }
 
-    public int getRsiAverage(String address) {
+    public int getRsiAverage(List<Integer> rssiList) {
         int sum = 0;
         int num = 1;
         int avrage = 0;
-        List<Integer> rssi = capitalCities.get(address);
+        //List<Integer> rssi = capitalCities.get(address);
+        List<Integer> rssi = rssiList;
         for (int j = 0; j < Objects.requireNonNull(rssi).size(); j++) {
             sum = sum + rssi.get(j);
         }
@@ -124,6 +129,9 @@ public class DeviceScanActivity extends ListActivity{
         avrage = sum/num;
         System.out.println("=====getRsiAverage=====");
         System.out.println("avrage: " + avrage);
+        if (avrage == 0){
+            avrage = -100;
+        }
         return avrage;
     }
 

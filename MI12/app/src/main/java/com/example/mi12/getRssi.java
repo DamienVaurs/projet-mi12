@@ -77,7 +77,7 @@ public class getRssi {
     private Point interpolate(Map<Point, Double> map, Point bestPoint) {
         // Find the surrounding points with the highest RSSI
         Point p1 = null, p2 = null;
-        double r1 = Double.MIN_VALUE, r2 = Double.MIN_VALUE;
+        double r1 = -100, r2 = -100;
         for (Map.Entry<Point, Double> entry : map.entrySet()) {
             Point point = entry.getKey();
             double rssi = entry.getValue();
