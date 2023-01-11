@@ -1,0 +1,852 @@
+{
+  "id": "002",
+  "documents": [
+    {
+      "id": "002",
+      "guid": "825bd4fc-99f7-4452-ba17-d05327945e12",
+      "name": "Projet MI12 Version 2",
+      "lastId": 23,
+      "createdOn": "2023-01-11T15:08:51.111Z",
+      "createdBy": {
+        "name": "Xinghua SHAO",
+        "email": "1156883877@qq.com",
+        "company": ""
+      },
+      "lastChangedOn": "2023-01-11T15:36:01.929Z",
+      "lastChangedBy": {
+        "name": "Xinghua SHAO",
+        "email": "1156883877@qq.com",
+        "company": ""
+      },
+      "data": [
+        {
+          "id": "1",
+          "guid": "e7f9b3ac-1faf-433b-a1ce-aea656f45fb6",
+          "heading": "Introduction",
+          "text": "<p>On conçoit une application pour trouver une balise cachée grâce aux informations captées par d'autres balises.</p>",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2023-01-11T15:09:39.029Z",
+              "docId": "002",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2023-01-11T15:09:49.767Z"
+            },
+            {
+              "attributesChanged": {
+                "text": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2023-01-11T15:10:12.138Z"
+            }
+          ],
+          "children": [
+            {
+              "id": "2",
+              "guid": "485c7d34-d177-4f6b-9b54-8352a95defec",
+              "history": [
+                {
+                  "affectedNodeId": "1",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:09:58.286Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "guid": "96a017f5-37ee-4702-aa29-7942655f54f3",
+          "heading": "Exigences fonctionnelles",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2023-01-11T15:10:52.600Z",
+              "docId": "002",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2023-01-11T15:11:15.167Z"
+            }
+          ],
+          "children": [
+            {
+              "id": "5",
+              "guid": "2986b233-541b-494d-8ee6-3e591e3c0c1b",
+              "heading": "L'application capte les signaux bluetooth",
+              "history": [
+                {
+                  "affectedNodeId": "3",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:11:41.147Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:11:59.210Z"
+                }
+              ]
+            },
+            {
+              "id": "6",
+              "guid": "0920fe46-62d9-43ec-b26c-5db31a28f952",
+              "heading": "L'application enregistre les informations",
+              "history": [
+                {
+                  "affectedNodeId": "3",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:12:33.047Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:12:38.439Z"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": "L'application enregistre les informations des signaux captés"
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:13:00.489Z"
+                }
+              ],
+              "children": [
+                {
+                  "id": "7",
+                  "guid": "8c2b9b37-c386-4fe3-a068-e984a2e68136",
+                  "heading": "Les coordonnées du point de mesure",
+                  "history": [
+                    {
+                      "affectedNodeId": "6",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:13:03.101Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:16:03.654Z"
+                    }
+                  ]
+                },
+                {
+                  "id": "8",
+                  "guid": "9e71ea7d-cdc4-4b2c-8a91-73f42c1e73ce",
+                  "heading": "Les valeur RSSI moyenne du point de mesure",
+                  "history": [
+                    {
+                      "affectedNodeId": "6",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:16:12.395Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:17:04.921Z"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "9",
+              "guid": "e0cfdaca-b4da-4e5e-82de-5bd5a35c5dd9",
+              "heading": "L'application affiche les coordonnées du point prédit",
+              "history": [
+                {
+                  "affectedNodeId": "3",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:17:26.713Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:18:17.822Z"
+                }
+              ],
+              "children": [
+                {
+                  "id": "10",
+                  "guid": "a637d9df-a07d-45d6-8b7c-082ceaa1350f",
+                  "heading": "La coordonnée X",
+                  "history": [
+                    {
+                      "affectedNodeId": "9",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:18:33.359Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:18:47.958Z"
+                    }
+                  ]
+                },
+                {
+                  "id": "11",
+                  "guid": "a5d83c70-5fe1-44cf-9295-6a36acfafdaf",
+                  "heading": "La coordonnée Y",
+                  "history": [
+                    {
+                      "affectedNodeId": "9",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:18:50.803Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:18:58.415Z"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "12",
+              "guid": "eeca3dee-6c94-4177-841b-fe5bcc21f5ca",
+              "heading": "L'interface principale de l'application possède trois champs de saisie",
+              "history": [
+                {
+                  "affectedNodeId": "3",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:19:45.370Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                },
+                {
+                  "affectedNodeId": "5",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:20:00.202Z",
+                  "docId": "002",
+                  "structureAction": "SwapDown"
+                },
+                {
+                  "affectedNodeId": "6",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:20:00.712Z",
+                  "docId": "002",
+                  "structureAction": "SwapDown"
+                },
+                {
+                  "affectedNodeId": "9",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:20:01.075Z",
+                  "docId": "002",
+                  "structureAction": "SwapDown"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:21:14.271Z"
+                }
+              ],
+              "children": [
+                {
+                  "id": "13",
+                  "guid": "a95847c4-a984-425b-a52a-e2ccf4c4b0ed",
+                  "heading": "La coordonée X du point de mesure",
+                  "history": [
+                    {
+                      "affectedNodeId": "12",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:21:16.581Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:21:36.878Z"
+                    }
+                  ]
+                },
+                {
+                  "id": "14",
+                  "guid": "084e7725-3533-4d52-8064-35373e73f4fa",
+                  "heading": "La coordonée Y du point de mesure",
+                  "history": [
+                    {
+                      "affectedNodeId": "12",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:21:38.712Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:21:43.169Z"
+                    }
+                  ]
+                },
+                {
+                  "id": "15",
+                  "guid": "48d36769-a08e-43c3-b902-4bf7b75f4be8",
+                  "heading": "L'adresse MAC du point de mesure",
+                  "history": [
+                    {
+                      "affectedNodeId": "12",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:21:44.770Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:22:26.416Z"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "16",
+              "guid": "bd54db41-8e8d-416e-bd9c-5a31c4afd6bd",
+              "heading": "L'interface principale de l'application possède trois boutons",
+              "history": [
+                {
+                  "affectedNodeId": "3",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:23:14.505Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:23:43.022Z"
+                }
+              ],
+              "children": [
+                {
+                  "id": "17",
+                  "guid": "13c71a05-5d63-4a16-9ebe-691ce57cd178",
+                  "heading": "Le bouton \"SCAN BLUETOOTH\"",
+                  "text": "<p>Après avoir appuyé sur ce bouton, l'application commence à scanner le signal RSSI.</p>",
+                  "history": [
+                    {
+                      "affectedNodeId": "16",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:23:45.320Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:24:09.738Z"
+                    },
+                    {
+                      "attributesChanged": {
+                        "text": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:26:46.635Z"
+                    },
+                    {
+                      "attributesChanged": {
+                        "text": "<p>Après avoir appuyé sur le bouton, l'application commence à scanner le signal RSSI.</p>"
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:27:13.621Z"
+                    }
+                  ]
+                },
+                {
+                  "id": "18",
+                  "guid": "1d868b6b-9d82-445c-a794-00043ce41a46",
+                  "heading": "Le bouton \"MEASURE\"",
+                  "text": "<p>Après avoir appuyé sur ce bouton, l'application stocke la valeur RSSI moyenne et les coordonnées du point de mesure.</p>",
+                  "history": [
+                    {
+                      "affectedNodeId": "16",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:24:14.818Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:24:33.859Z"
+                    },
+                    {
+                      "attributesChanged": {
+                        "text": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:27:07.665Z"
+                    },
+                    {
+                      "attributesChanged": {
+                        "text": "<p>Après avoir appuyé sur ce bouton,&nbsp;</p>"
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:28:28.106Z"
+                    }
+                  ]
+                },
+                {
+                  "id": "19",
+                  "guid": "d1892dab-f2bb-4314-b298-3286819473d2",
+                  "heading": "Le bouton \"MEASURE RSSI\"",
+                  "text": "<p>Après avoir appuyé sur ce bouton, l'application prédit les coordonnées de la balise cachée.</p>",
+                  "history": [
+                    {
+                      "affectedNodeId": "16",
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:24:36.605Z",
+                      "docId": "002",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:24:47.825Z"
+                    },
+                    {
+                      "attributesChanged": {
+                        "text": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "1156883877@qq.com",
+                        "name": "Xinghua SHAO"
+                      },
+                      "changedOn": "2023-01-11T15:29:29.673Z"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "23",
+              "guid": "4fbca163-6c03-43a3-912f-d12846a43ea8",
+              "heading": "L'application prédit les coordonnées de la balise cachée",
+              "history": [
+                {
+                  "affectedNodeId": "3",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:35:38.455Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:36:01.929Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "guid": "ab6871e7-8056-4754-bfd4-a2f3e6bca4d4",
+          "heading": "Exigences extra fonctionnelles",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2023-01-11T15:11:17.282Z",
+              "docId": "002",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "1156883877@qq.com",
+                "name": "Xinghua SHAO"
+              },
+              "changedOn": "2023-01-11T15:11:35.072Z"
+            }
+          ],
+          "children": [
+            {
+              "id": "20",
+              "guid": "22662245-d78d-477c-a33a-936b38dc640b",
+              "heading": "L'application fonctionne sur Android",
+              "history": [
+                {
+                  "affectedNodeId": "4",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:24:59.990Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:25:10.066Z"
+                }
+              ]
+            },
+            {
+              "id": "21",
+              "guid": "49d9d6c5-fd90-4ab1-b873-8ac8152cd773",
+              "heading": "L'application est développée avec JAVA",
+              "history": [
+                {
+                  "affectedNodeId": "4",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:25:16.688Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:25:18.682Z"
+                }
+              ]
+            },
+            {
+              "id": "22",
+              "guid": "2ee3392c-b37f-4985-92c9-88409326b28c",
+              "heading": "L'application fonctionne à partir d'Android 5",
+              "history": [
+                {
+                  "affectedNodeId": "4",
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:25:24.616Z",
+                  "docId": "002",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "1156883877@qq.com",
+                    "name": "Xinghua SHAO"
+                  },
+                  "changedOn": "2023-01-11T15:25:26.166Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "attributes": {
+      },
+      "view": {
+        "columns": [
+          {
+            "columnId": "id",
+            "hidden": false,
+            "width": 65
+          },
+          {
+            "columnId": "description",
+            "hidden": false,
+            "width": 500
+          },
+          {
+            "columnId": "attributes",
+            "hidden": true,
+            "width": 300
+          },
+          {
+            "columnId": "discussion",
+            "hidden": true,
+            "width": 300
+          },
+          {
+            "columnId": "links",
+            "hidden": true,
+            "width": 300
+          }
+        ]
+      }
+    }
+  ],
+  "attachments": {
+  },
+  "traceability": {
+    "reference": {
+      "name": "Reference",
+      "source": "References",
+      "target": "Referenced by"
+    }
+  },
+  "metadata": {
+    "format": "2.15",
+    "saveHistory": true
+  }
+}
