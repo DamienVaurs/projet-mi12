@@ -24,7 +24,5 @@ public class BluetoothReceiver extends BroadcastReceiver {
             Toast.makeText(context, message, Toast.LENGTH_LONG).show();
             Log.i("DebugBluetooth", message);
         }
-
     }
-
 }

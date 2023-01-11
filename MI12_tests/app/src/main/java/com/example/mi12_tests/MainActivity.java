@@ -34,10 +34,7 @@ public class MainActivity extends AppCompatActivity {
     public BluetoothAdapter bluetoothAdapter;
     public static boolean mScanning = false;
 
-    //private List<com.example.mi12_tests.Measurement> measurements = new ArrayList<>();
-
     private DeviceScanActivity ScanActivity;
-    private DeviceScanActivity ScanActivity2;
 
     private List<Measurement> measurements = new ArrayList<>();
 
@@ -47,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
     public MainActivity() {
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,10 +80,8 @@ public class MainActivity extends AppCompatActivity {
                         REQUEST_ENABLE_LOCATION );
             }
         }
-        // On enregistre un gestionnaire d'événements sur le bouton
+        // On enregistre un gestionnaire d'événements sur le bouton <Scan Bluetooth>
         btnScan = findViewById( R.id.btnScan );
-        //btnScan.setOnClickListener( btnScanLister );
-
         btnScan.setOnClickListener(new View.OnClickListener() {
             private BluetoothReceiver bluetoothReceiver = null;
 
@@ -102,42 +96,23 @@ public class MainActivity extends AppCompatActivity {
                 EditText yInput = findViewById(R.id.y_input);
                 double x = Double.parseDouble(xInput.getText().toString());
                 double y = Double.parseDouble(yInput.getText().toString());
-                System.out.println("Points : " + x + " " + y);
+                //System.out.println("Points : " + x + " " + y);
                 point = new Point(x, y);
                 // Ask the user to input the device address
                 EditText addressInput = findViewById(R.id.address_input);
                 address = addressInput.getText().toString();
-                System.out.println("Adresse : " + address);
+                //System.out.println("Adresse : " + address);
 
-                // rssi_moy = ScanActivity.scanLeDevice(true, address, point);
                 try {
-                    rssi_moy = ScanActivity.scanLeDevice(true, address, point);
+                    ScanActivity.scanLeDevice(true, address, point);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("Rssi Scan Retourne : " + rssi_moy);
-
-                //Measurement measure = new Measurement(point, ScanActivity.scanLeDevice(true, address, point));
-                //measurements.add(measure);
-
-                //handler = new Handler();
-                //handler.postDelayed(new Runnable() {
-
-                  //  @Override
-                    //public void run() {
-                      //  System.out.println("Rssi Moy : " + rssi_moy);
-                        //Measurement measure = new Measurement(point, rssi_moy);
-                        //measurements.add(measure);
-                   // }
-
-                //},11000);
-
+                //System.out.println("Rssi Scan Retourne : " + rssi_moy);
             }
         });
 
         btnMeasure = findViewById( R.id.btnMeasure );
-        //btnScan.setOnClickListener( btnScanLister );
-
         btnMeasure.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -148,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
                 Measurement measure = new Measurement(point, rssi_moy);
                 System.out.println("Point : " + measure.getPoint() + "Rssi : " + measure.getRssi());
                 measurements.add(measure);
-
             }
         });
 
@@ -169,28 +143,16 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.turn_on_ble, Toast.LENGTH_SHORT).show();
         }
 
-        //实例化扫描类
-        ScanActivity = new DeviceScanActivity();
-        ScanActivity.bluetoothAdapter = bluetoothAdapter;
-        //实例化Ble类
-        ScanActivity.makeBleInstance();
-        //启动扫描
-//        ScanActivity.scanLeDevice(true);
-        //
-
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 System.out.println("Clicked MEASURE RSSI Button");
-                 Point balise = Measurement.getPosition(measurements);
-
+                Point balise = Measurement.getPosition(measurements);
                 TextView textView = findViewById(R.id.text_view);
                 String message = " X : " + balise.getX() + " " + "Y : " + balise.getY();
                 textView.setText(message);
-
             }
         });
-
     }
 }

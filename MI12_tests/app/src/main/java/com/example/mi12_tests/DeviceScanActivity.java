@@ -24,14 +24,12 @@ public class DeviceScanActivity extends ListActivity{
     private static final long SCAN_PERIOD = 10000;
 
     private List<Integer> rsiList1 = new ArrayList<>();
-    //private List<Integer> rsiList2 = new ArrayList<>();
     HashMap<String, List<Integer> > capitalCities = new HashMap<String, List<Integer>>();
-    HashMap<String, Integer>[][] tableau = new HashMap[8][14];
 
     private Ble mBle;
 
     @SuppressLint("MissingPermission")
-    public double scanLeDevice(final boolean enable, String address, Point point) throws InterruptedException {
+    public void scanLeDevice(final boolean enable, String address, Point point) throws InterruptedException {
 
         BluetoothAdapter.LeScanCallback leScanCallback =
                 new BluetoothAdapter.LeScanCallback() {
@@ -41,7 +39,6 @@ public class DeviceScanActivity extends ListActivity{
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                //System.out.println("ENTREE");
                                 if (device.getAddress().equals(address)) {
                                     rsiList1.add(rssi);
                                     capitalCities.put(address, rsiList1);
@@ -54,59 +51,34 @@ public class DeviceScanActivity extends ListActivity{
 
         block = false;
         rsiList1.clear();
-        //rsiList2.clear();
         capitalCities.clear();
+
         if (enable) {
             handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @SuppressLint("MissingPermission")
                 @Override
                 public void run() {
-//                    MainActivity.mScanning = false;
                     MainActivity.mScanning = false;
                     bluetoothAdapter.stopLeScan(leScanCallback);
                     if (rsiList1 == null) {
                         rsiList1.add(-100);
                         capitalCities.put(address, rsiList1);
                     }
-                    System.out.println("RSILIST: " + rsiList1) ;
-//                    System.out.println("RSILIST: " + rsiList2) ;
-                    //System.out.println("C5:32:52:D1:10:02 RSSILIST: " + Objects.requireNonNull(capitalCities.get(address)));
+                    //System.out.println("RSILIST: " + rsiList1) ;
                     rsiAverage = getRsiAverage(rsiList1);
-                    System.out.println("C5:32:52:D1:10:02 Average: " + rsiAverage);
-                    saveRssi("C5:32:52:D1:10:02");
-
-                    //System.out.println("tableau[0][0]: " + tableau[0][0]);
-
-                    //Measurement measurement = new Measurement(point, rsiAverage);
-                    //measurements.add(measurement);
-
-
-
+                    //System.out.println("C5:32:52:D1:10:02 Average: " + rsiAverage);
                 }
 
 
             },SCAN_PERIOD);
             MainActivity.mScanning = true;
             bluetoothAdapter.startLeScan(leScanCallback);
-            //Thread.sleep(11000);
-            return Double.parseDouble(String.valueOf(rsiAverage));
         }else {
             MainActivity.mScanning = false;
             bluetoothAdapter.stopLeScan(leScanCallback);
-            System.out.println("ELSE");
-            return 0;
+            //System.out.println("ELSE");
         }
-    }
-
-
-
-    public void saveRssi(String address) {
-        //getRsiAverage(address);
-        // pour tester HashMap tableau
-        HashMap<String, Integer> test = new HashMap<>();
-        test.put("C5:32:52:D1:10:02", rsiAverage);
-        tableau[0][0] = test;
     }
 
     public double getRssiMoyen() {
@@ -140,8 +112,6 @@ public class DeviceScanActivity extends ListActivity{
         mBle.setBleListener(new BleListener(){
             @Override
             public void block() {
-                System.out.println("a car is in the Parking space!");
-                System.out.println("Now turn on the camera to shoot!");
             }
         });
     }
